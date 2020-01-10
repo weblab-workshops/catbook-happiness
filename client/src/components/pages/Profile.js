@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CatHappiness from "../modules/CatHappiness.js";
-import { get } from "../../utilities";
+import { get, post } from "../../utilities";
 
 import "../../utilities.css";
 import "./Profile.css";
@@ -15,12 +15,22 @@ class Profile extends Component {
 
   componentDidMount() {
     document.title = "Profile Page";
-    get(`/api/user`, { userid: this.props.userId }).then((user) => this.setState({ user: user }));
+    get(`/api/user`, { userId: this.props.userId }).then((user) => {
+      let catHappiness = user.cat_happiness;
+      if (catHappiness === undefined) {
+        // in case this is an old user who doesn't have a cat_happiness value
+        catHappiness = 0;
+      }
+
+      this.setState({ user: user, catHappiness: catHappiness });
+    });
   }
 
   incrementCatHappiness = () => {
-    this.setState({
-      catHappiness: this.state.catHappiness + 1,
+    post("/api/cat-happiness", { userId: this.props.userId }).then((res) => {
+      this.setState({
+        catHappiness: res.cat_happiness,
+      });
     });
   };
 
