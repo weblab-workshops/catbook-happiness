@@ -75,7 +75,7 @@ git checkout complete
 git checkout master
 ```
 
-[Step 3 Solution](https://github.com/weblab-workshops/catbook-happiness/blob/master/docs/step2-solution.md)
+[Step 3 Solution](https://github.com/weblab-workshops/catbook-happiness/blob/master/docs/step3-solution.md)
 
 ## Extra Credit
 
