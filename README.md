@@ -85,7 +85,7 @@ In the branch `complete`, the code basically works, but there are a few tricky c
 
 The backend in branch works pretty much fine, but there is a case where if you and your friends are spamming cat happiness fast enough, some of your clicks may not seem to go through. (e.g. after clicking 1000 times, cat happiness is only 973).
 
-This occurs do to a _race condition_ in the way we handle `/api/cat-happiness`.
+This occurs due to a _race condition_ in the way we handle `/api/cat-happiness`.
 
 ```js
 User.findById(req.body.userId).then((user) => {
