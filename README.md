@@ -38,6 +38,8 @@ Fortunately, mongoose has an convenient solution. You can specify a **default va
 
 Add a default value to the `cat_happiness` field. You can [view the mongoose documentation](https://mongoosejs.com/docs/defaults.html).
 
+[Step 1 Solution](https://github.com/weblab-workshops/catbook-happiness/blob/master/docs/step1-solution.md)
+
 ## Step 2: Add an API route
 
 We need a new API route, so that whenever the user clicks on their profile picture, we increase the value of `cat_happiness` stored in the database. Here is the specification for this route:
@@ -49,9 +51,11 @@ We need a new API route, so that whenever the user clicks on their profile pictu
 
 Implement this behavior. This may come in handy: http://weblab.to/mongo-snippets
 
+[Step 2 Solution](https://github.com/weblab-workshops/catbook-happiness/blob/master/docs/step2-solution.md)
+
 ## Step 3: Update the frontend
 
-Now, let's hook it up to the frontend. This will only involve changing one file: `Profile.js`. Using our new endpoint, modify this file so that cat happiness is preserved when you refresh the page. If you don't know where to start, check out [these hints](f).
+Now, let's hook it up to the frontend. This will only involve changing one file: `Profile.js`. Using our new endpoint, modify this file so that cat happiness is preserved when you refresh the page. If you don't know where to start, check out [these hints](https://github.com/weblab-workshops/catbook-happiness/blob/master/docs/step3-hints.md).
 
 Then, you're done! The result should look like the gif at the top of this page.
 
@@ -70,6 +74,8 @@ git checkout complete
 # to go back to viewing your work, you can type:
 git checkout master
 ```
+
+[Step 3 Solution](https://github.com/weblab-workshops/catbook-happiness/blob/master/docs/step2-solution.md)
 
 ## Extra Credit
 
@@ -117,5 +123,3 @@ Do you see the problem? When this gets saved into the database, `cat_happiness =
 You might experience a bug with the Profile button in the navbar. If you go to someone else's profile, and then click on the "Profile" button, you'll notice that nothing on the page changes, even though the URL changes.
 
 Can you figure out why this might be happening? (we may get to this in Advanced React lecture next week)
-
-### Solutions to both bugs
