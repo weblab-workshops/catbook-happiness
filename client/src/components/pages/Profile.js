@@ -16,13 +16,7 @@ class Profile extends Component {
   componentDidMount() {
     document.title = "Profile Page";
     get(`/api/user`, { userId: this.props.userId }).then((user) => {
-      let catHappiness = user.cat_happiness;
-      if (catHappiness === undefined) {
-        // in case this is an old user who doesn't have a cat_happiness value
-        catHappiness = 0;
-      }
-
-      this.setState({ user: user, catHappiness: catHappiness });
+      this.setState({ user: user, catHappiness: user.cat_happiness });
     });
   }
 
