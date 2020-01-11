@@ -42,7 +42,7 @@ Add a default value to the `cat_happiness` field. You can [view the mongoose doc
 
 ## Step 2: Add an API route
 
-We need a new API route, so that whenever the user clicks on their profile picture, we increase the value of `cat_happiness` stored in the database. Here is the specification for this route:
+We need a new API route, so that whenever the user clicks on their profile picture, we increase the value of `cat_happiness` stored in the database. Here is the specification (i.e. the requirements) for this route:
 
 - POST `/api/cat-happiness`
 - When this route is called, increase the specified user's cat happiness by 1.
@@ -83,7 +83,7 @@ In the branch `complete`, the code basically works, but there are a few tricky c
 
 ### Bug in the backend
 
-The backend in branch works pretty much fine, but there is a case where if you and your friends are spamming cat happiness fast enough, some of your clicks may not seem to go through. (e.g. after clicking 1000 times, cat happiness is only 973).
+The backend in branch `complete` works pretty much fine, but there is a case where if you and your friends are spamming cat happiness fast enough, some of your clicks may not seem to go through. (e.g. after clicking 1000 times, cat happiness is only 973).
 
 This occurs due to a _race condition_ in the way we handle `/api/cat-happiness`.
 
