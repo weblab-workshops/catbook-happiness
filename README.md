@@ -66,7 +66,7 @@ To view final solution for this assignment:
 ```bash
 # save your changes first by committing to git
 git add .
-git commit "my changes"
+git commit -m "my changes"
 
 # view the completed code
 git checkout complete
